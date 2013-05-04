@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuggles;
+namespace Phuggles\OpenBeer;
 
 class Beer {
     static public function all($parameters = array()) {

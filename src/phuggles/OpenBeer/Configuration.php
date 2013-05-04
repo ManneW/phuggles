@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuggles;
+namespace Phuggles\OpenBeer;
 
 class Configuration {
     public static $host          = "http://api.openbeerdatabase.com/v1/";

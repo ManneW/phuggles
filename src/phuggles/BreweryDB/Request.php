@@ -1,17 +1,22 @@
 <?php
 
-namespace Phuggles;
+namespace Phuggles\BreweryDB;
 
 class Request {
     static public function get($path, $parameters = array()) {
-        $parameters = array_merge($parameters, array("token" => Configuration::$public_token));
+        $parameters = array_merge($parameters, array("apikey" => Configuration::$public_token, "format"=>"JSON"));
         $path       = $path . "?" . http_build_query($parameters);
 
         return self::_request($path);
     }
+	static public function search($path, $parameters = array()) {
+        $parameters = array_merge($parameters, array("apikey" => Configuration::$public_token, "format"=>"JSON"));
+        $path       = $path . "?" . http_build_query($parameters);
 
+        return self::_request($path);
+    }
     static public function post($path, $parameters = array()) {
-        $parameters = array_merge($parameters, array("token" => Configuration::$private_token));
+        $parameters = array_merge($parameters, array("apikey" => Configuration::$private_token));
         $options    = array(
             CURLOPT_POST       => 1,
             CURLOPT_POSTFIELDS => http_build_query($parameters)

@@ -1,0 +1,11 @@
+{
+    "name": "mannew/phuggles",
+    "description": "A PHP client for Open Beer Database.",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "Phuggles": "src"
+        }
+    }
+}

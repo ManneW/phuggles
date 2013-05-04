@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuggles;
+namespace Phuggles\BreweryDB;
 
 class Brewery {
     static public function all($parameters = array()) {
